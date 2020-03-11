@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Football Times</string>
+    <string name="loginpage">Login Your Account</string>
+    <string name="account">account</string>
+    <string name="search">search</string>
+    <string name="logout">logout</string>
+</resources>

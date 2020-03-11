@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "710659682521",
+    "firebase_url": "https://football-times-1347b.firebaseio.com",
+    "project_id": "football-times-1347b",
+    "storage_bucket": "football-times-1347b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710659682521:android:af97edd4e519c2eeac0ec8",
+        "android_client_info": {
+          "package_name": "com.example.footballbal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710659682521-0skqpnnafd44grbiu28p2i9jqoct3e4i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.footballbal",
+            "certificate_hash": "778140dbf60406e12fc98f46ed9f22941f4f84e3"
+          }
+        },
+        {
+          "client_id": "710659682521-lbv4d07modcq2g32ibn75qhgrpi4qphb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1OGYCRShI8iYdLKvNkk4O8va9GIvwLsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710659682521-lbv4d07modcq2g32ibn75qhgrpi4qphb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
