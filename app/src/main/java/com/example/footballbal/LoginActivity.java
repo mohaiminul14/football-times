@@ -166,7 +166,7 @@ public class LoginActivity extends AppCompatActivity {
         catch (ApiException e)
         {
            e.printStackTrace();
-            FirebaseGoogleAuth(null);
+            //FirebaseGoogleAuth(null);
         }
     }
 
