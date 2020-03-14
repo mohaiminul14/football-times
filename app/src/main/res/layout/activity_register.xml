@@ -9,6 +9,23 @@
     android:background="#609857"
     >
 
+    <EditText
+        android:id="@+id/rgname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edit_text"
+        android:hint="name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgcpass" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -33,6 +50,7 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/edit_text"
         android:hint="email"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +67,7 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/edit_text"
         android:hint="password"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,12 +84,14 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/edit_text"
         android:hint="confirm password"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgpass" />
 
     <Button
+        android:id="@+id/rereg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -83,9 +104,10 @@
         android:textColor="#fff"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rgcpass"
-        android:id="@+id/rereg"/>
+        app:layout_constraintTop_toBottomOf="@+id/rgname" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
