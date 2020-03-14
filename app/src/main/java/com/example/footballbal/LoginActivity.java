@@ -2,9 +2,11 @@ package com.example.footballbal;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -27,6 +29,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthCredential;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -63,12 +67,13 @@ public class LoginActivity extends AppCompatActivity {
                 {
 
                     firebaseAuth.signInWithEmailAndPassword(emailtext,passtext).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful())
                             {
-                                if(user.isEmailVerified()) {
+                                if(user !=null && user.isEmailVerified()) {
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                     startActivity(intent);
                                     finish();
@@ -81,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                             else
                             {
 
-                                String a = task.getException().getMessage();
+                                String a = Objects.requireNonNull(task.getException()).getMessage();
 
                                 Toast.makeText(LoginActivity.this, a,Toast.LENGTH_LONG).show();
 
@@ -111,20 +116,16 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
-
-        if (user != null)
-        {
-            if (user.isEmailVerified()) {
+            if (user!=null && user.isEmailVerified()) {
 
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
 
-        }
 
-        else {
+        else
+            {
 
 
 

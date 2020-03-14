@@ -35,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         FirebaseUser firebaseUser =  mAuth.getCurrentUser();
-        if (firebaseUser==null)
+        if (firebaseUser!=null && firebaseUser.isEmailVerified())
+        {
+
+        }
+        else
         {
 
             Intent intent =new Intent(MainActivity.this,LoginActivity.class);
@@ -43,21 +47,15 @@ public class MainActivity extends AppCompatActivity {
             finish();
 
         }
-        else
-        {
-
-
-
-        }
     }
 
 
-        @Override
-            public boolean onCreateOptionsMenu(Menu menu)
-        {
-                getMenuInflater().inflate(R.menu.nev_log,menu);
-                return true;
-         }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.nev_log,menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
