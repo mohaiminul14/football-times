@@ -47,6 +47,11 @@ public class RegisterActivity extends AppCompatActivity {
     static final int Google_sign = 123;
     GoogleSignInClient mg;
 
+    //googl signin delete hobe
+    
+
+
+
     private FirebaseAuth mAuth;
 
 
